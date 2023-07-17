@@ -1,0 +1,121 @@
+:root {
+    --clr-primary: hsl(219, 99%, 66%);
+    --clr-secondary: hsl(259, 69%, 65%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-900: hsl(230, 32%, 15%);
+
+    --gradient: linear-gradient(45deg, var(--clr-primary), var(--clr-secondary));
+}
+
+body {
+    font-family: system-ui;
+    text-align: center;
+    color: var(--clr-neutral-900);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2rem 20rem 2rem;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+}
+
+.card-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.welcome {
+    color: var(--clr-neutral-900);
+    background: var(--gradient);
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+}
+
+.welcome div {
+    padding-block: 1rem;
+    grid-column: 2 / 3;
+}
+
+.start-chatting {
+    background: var(--clr-neutral-100);
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3.5rem rgb(0 0 0 / .5);
+    padding: 2rem 4rem 4rem;
+
+    display: grid;
+    gap: 2rem;
+}
+
+.start-chatting {
+    margin: 0;
+}
+
+.start-chatting img {
+    max-width: 6rem;
+    border-radius: 50%;
+}
+
+.profile>* {
+    margin: 0;
+}
+
+.name {
+    font-size: 1.125rem;
+}
+
+.status {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    font-size: 0.875rem;
+    opacity: 0.7;
+    border-radius: 100vw;
+    border: 1px solid rgb(133, 133, 133);
+    width: max-content;
+    padding: 0.05em 0.75em;
+    margin-inline: auto;
+}
+
+.status::before {
+    content: '';
+    height: .6em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--status-color, black);
+}
+
+.status[data-status="active"] {
+    --status-color: limegreen;
+}
+
+.status[data-status="away"] {
+    --status-color: rgb(255, 196, 0);
+}
+
+.button {
+    background: var(--gradient);
+    color: var(--clr-neutral-100);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    border: 0;
+    padding: 1em;
+    background-size: 100%;
+    transition: background-size 200ms scale 250ms ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+    background-size: 200%;
+    scale: 1.05;
+}

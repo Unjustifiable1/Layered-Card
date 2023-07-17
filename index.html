@@ -4,25 +4,28 @@
     <meta charset="" UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layered Card</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h1>Creating a layered card with HTML & CSS</h1>
     <div class="card">
         <div class="welcome">
-            <h3>Hi George</h3>
-            <p>
-                You can contact us whenever you need help or just curious about something.
-            </p>
+            <div>
+                <h3 class="card-heading">Hi George</h3>
+                <p>You can contact us whenever you need help or just curious about something.</p>
+            </div>
         </div>
 
-        <h4>Start Chatting</h4>
-        <img src="" alt="Photo by <a href=#>Unsplash</a>
-        ">
         <div class="start-chatting">
-            <button class="message"></button>
+            <h4 class="card-heading">Start Chatting</h4>
+            <div class="profile">
+                <img src="https://images.unsplash.com/photo-1501706362039-c06b2d715385?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=620&q=80"
+                    alt="Photo by Frida Lannerström on Unsplash">
+                <p class="name">Zealous Zebra</p>
+                <div class="status" data-status="active">Active</div>
+            </div>
+            <button class="button">Send a message</button>
         </div>
-
     </div>
 </body>
 
